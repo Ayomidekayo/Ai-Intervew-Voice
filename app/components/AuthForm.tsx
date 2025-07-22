@@ -9,7 +9,7 @@ import Link from "next/link"
 import { toast } from "sonner"
 import Formfield from "./Formfield"
 import { useRouter } from "next/navigation"
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth"
 //import { auth } from "@/firebase/client"
 import { signIn, signUp } from "@/lib/action/auth.action"
 import { auth } from "@/firebase/client"
@@ -54,8 +54,8 @@ const AuthForm = ({type}:{type:FormType}) => {
           password,
         });
 
-        if (!result.success) {
-          toast.error(result.message);
+        if (!result?.success) {
+          toast.error(result?.message);
           return;
         }
          toast.success("Account created successfully. Please sign in.");

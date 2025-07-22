@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={`${monaSans.className} antialiased pattern`}
+        suppressHydrationWarning={true}
       >
         {children}
         <Toaster/>

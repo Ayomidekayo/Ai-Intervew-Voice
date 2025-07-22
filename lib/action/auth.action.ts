@@ -4,7 +4,7 @@ import { auth, db } from "@/firebase/admin";
 import { cookies } from "next/headers";
 
 //https://console.firebase.google.com/u/0/?fb_utm_source=chatgpt.com
-const ONE_WEEK=60*60* 247;
+const ONE_WEEK=60*60*24*7;
 export async function signUp(params:SignUpParams){
     const {uid,name,email}=params;
     try {
